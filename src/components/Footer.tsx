@@ -1,4 +1,5 @@
-import { Crown, Mail, Phone, MapPin } from 'lucide-react';
+import React from 'react';
+import { Crown, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -21,17 +22,20 @@ export function Footer() {
               Elevating spaces with precision, care, and modern sophistication.
             </p>
             <div className="flex gap-3">
-              {['facebook', 'instagram', 'linkedin', 'twitter'].map((social) => (
-                <a 
-                  key={social}
-                  href="#" 
-                  className="w-10 h-10 rounded-lg bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 flex items-center justify-center transition-all duration-300"
-                >
-                  <span className="text-gray-400 hover:text-emerald-400 transition-colors">
-                    {social.charAt(0).toUpperCase()}
-                  </span>
-                </a>
-              ))}
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 flex items-center justify-center transition-all duration-300"
+              >
+                <Facebook className="h-4 w-4 text-gray-400 hover:text-emerald-400 transition-colors" />
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 flex items-center justify-center transition-all duration-300"
+              >
+                <Instagram className="h-4 w-4 text-gray-400 hover:text-emerald-400 transition-colors" />
+              </a>
             </div>
           </div>
 
