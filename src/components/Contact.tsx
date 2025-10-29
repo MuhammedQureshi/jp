@@ -8,30 +8,23 @@ import { motion } from 'motion/react';
 const contactInfo = [
   {
     icon: Phone,
-    title: 'Concierge Line',
-    details: '(555) 123-4567',
+    title: 'Phone',
+    details: '07411444292',
     subddetails: 'Available 24/7',
-    link: 'tel:5551234567',
+    link: 'tel:07411444292',
   },
   {
     icon: Mail,
     title: 'Email',
-    details: 'concierge@jpselite.com',
+    details: 'YNaperez@aol.com',
     subddetails: 'Response within 2 hours',
-    link: 'mailto:concierge@jpselite.com',
-  },
-  {
-    icon: MapPin,
-    title: 'Service Area',
-    details: 'Greater Metropolitan',
-    subddetails: 'Luxury properties only',
-    link: '#',
+    link: 'mailto:YNaperez@aol.com',
   },
   {
     icon: Clock,
     title: 'Availability',
-    details: 'Mon - Sun: 24/7',
-    subddetails: 'At your convenience',
+    details: 'Mon - Fri: 8am - 6pm',
+    subddetails: '',
     link: '#',
   },
 ];
@@ -165,18 +158,6 @@ export function Contact() {
                 </motion.a>
               );
             })}
-
-            {/* Premium Badges */}
-            <div className="grid grid-cols-2 gap-4 pt-6">
-              <Card className="p-6 text-center bg-gradient-to-br from-white/5 to-white/0 border-white/10 backdrop-blur-xl">
-                <div className="text-4xl mb-2">🏆</div>
-                <p className="text-gray-400 text-sm">Award Winning</p>
-              </Card>
-              <Card className="p-6 text-center bg-gradient-to-br from-white/5 to-white/0 border-white/10 backdrop-blur-xl">
-                <div className="text-4xl mb-2">🛡️</div>
-                <p className="text-gray-400 text-sm">Fully Bonded</p>
-              </Card>
-            </div>
           </motion.div>
         </div>
       </div>

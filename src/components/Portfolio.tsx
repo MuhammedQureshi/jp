@@ -55,7 +55,7 @@ export function Portfolio() {
             Portfolio of Excellence
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A glimpse into the prestigious properties we have the honor of serving
+            A preview of the spaces that reflect our standard of excellence.
           </p>
         </motion.div>
 

@@ -115,13 +115,13 @@ export function Services() {
                       ))}
                     </ul>
 
-                    <a
+                    {/* <a
                       href="#contact"
                       className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors group/link"
                     >
                       <span>Learn More</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                    </a>
+                    </a> */}
                   </div>
 
                   {/* Shine Effect */}

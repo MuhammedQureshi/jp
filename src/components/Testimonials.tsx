@@ -6,34 +6,35 @@ import { Button } from './ui/button';
 
 const testimonials = [
   {
-    name: 'Alexandra Sterling',
-    role: 'Penthouse Owner, Manhattan',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+    name: 'Sophie Turner',
+    role: 'Homeowner, Chelsea',
+    image: 'https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=150&h=150&fit=crop',
     rating: 5,
-    text: 'JP\'s Cleaning Service has redefined luxury for us. Their attention to detail is extraordinary, and the team treats our home with the utmost care and respect. Simply unmatched.',
+    text: "JP Cleaning brought an incredible freshness to our home. Every detail was handled with precision and care — it felt like stepping into a brand-new space.",
   },
   {
-    name: 'Marcus Chen',
-    role: 'CEO, Tech Fortune 500',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop',
+    name: 'Daniel Reed',
+    role: 'Managing Director, Reed & Co.',
+    image: 'https://images.unsplash.com/photo-1603415526960-f7e0328b9d46?w=150&h=150&fit=crop',
     rating: 5,
-    text: 'As someone who values excellence, I can confidently say JP\'s Premium Cleaning exceeds all expectations. Their concierge approach and flawless execution make them indispensable.',
+    text: "We use JP Cleaning for our offices, and the results are consistently exceptional. Professional, discreet, and always on schedule — a pleasure to work with.",
   },
   {
-    name: 'Victoria Blackwood',
-    role: 'Property Portfolio Manager',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop',
+    name: 'Amelia Hart',
+    role: 'Interior Designer',
+    image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop',
     rating: 5,
-    text: 'Managing luxury properties demands perfection. JP\'s team delivers consistently exceptional results across our entire portfolio. They are the gold standard in premium cleaning.',
+    text: "Their team understands luxury interiors better than most. They treat every finish and fabric with respect — perfect for my clients’ high-end spaces.",
   },
   {
-    name: 'James Rothschild',
-    role: 'Estate Owner',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop',
+    name: 'Oliver Grant',
+    role: 'Property Manager, Kensington',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop',
     rating: 5,
-    text: 'The level of professionalism and discretion is remarkable. JP\'s has become an essential part of maintaining our estate. Truly the finest cleaning service we\'ve encountered.',
+    text: "From deep cleans to regular maintenance, JP Cleaning delivers flawless results every time. They’ve quickly become my go-to for all managed properties.",
   },
 ];
+
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -107,13 +108,6 @@ export function Testimonials() {
 
                     {/* Author */}
                     <div className="flex flex-col items-center gap-4">
-                      <div className="w-20 h-20 rounded-full overflow-hidden ring-4 ring-emerald-500/30">
-                        <img
-                          src={testimonials[currentIndex].image}
-                          alt={testimonials[currentIndex].name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
                       <div className="text-center">
                         <h4 className="text-xl text-white mb-1">{testimonials[currentIndex].name}</h4>
                         <p className="text-emerald-400">{testimonials[currentIndex].role}</p>
@@ -173,8 +167,8 @@ export function Testimonials() {
           {[
             { value: '4.9/5', label: 'Client Rating' },
             { value: '98%', label: 'Retention Rate' },
-            { value: '10K+', label: 'Properties Served' },
-            { value: '15+', label: 'Years Excellence' },
+            { value: '100+', label: 'Properties Served' },
+            { value: '5+', label: 'Years Excellence' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent mb-2">

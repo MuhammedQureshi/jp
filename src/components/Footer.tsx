@@ -11,16 +11,14 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-2.5 rounded-xl">
-                <Crown className="h-7 w-7 text-black" />
-              </div>
+              <img src="/1.jpeg" alt="" className='h-12' />
               <div>
                 <span className="block text-xl text-white">JP's</span>
-                <span className="block text-xs text-emerald-400 tracking-widest uppercase -mt-1">Premium Cleaning</span>
+                <span className="block text-xs text-emerald-400 tracking-widest uppercase -mt-1">Cleaning Services</span>
               </div>
             </div>
             <p className="text-gray-500 mb-6 leading-relaxed">
-              Setting the standard for luxury cleaning services since 2009.
+              Elevating spaces with precision, care, and modern sophistication.
             </p>
             <div className="flex gap-3">
               {['facebook', 'instagram', 'linkedin', 'twitter'].map((social) => (
@@ -39,20 +37,19 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white mb-6 tracking-wider">Premium Services</h3>
+            <h3 className="text-white mb-6 tracking-wider">Services</h3>
             <ul className="space-y-3 text-gray-500">
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Residential Elite</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Corporate Excellence</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Deep Restoration</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Crystal Windows</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Upholstery Care</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Concierge Service</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">General Cleaning</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Deep Cleaning</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">End of Tenancy Cleaning</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Carpet & Steam Cleaning</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Window Cleaning</a></li>
             </ul>
           </div>
 
           {/* Company */}
-          <div>
-            <h3 className="text-white mb-6 tracking-wider">Company</h3>
+          {/* <div>
+            <h3 className="text-white mb-6 tracking-wider">Quick Links</h3>
             <ul className="space-y-3 text-gray-500">
               <li><a href="#" className="hover:text-emerald-400 transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Our Story</a></li>
@@ -61,7 +58,7 @@ export function Footer() {
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Terms of Service</a></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div>
@@ -72,7 +69,7 @@ export function Footer() {
                   <div className="bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
                     <Phone className="h-4 w-4" />
                   </div>
-                  <span>(555) 123-4567</span>
+                  <span>07411444292</span>
                 </a>
               </li>
               <li>
@@ -80,7 +77,7 @@ export function Footer() {
                   <div className="bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
                     <Mail className="h-4 w-4" />
                   </div>
-                  <span>concierge@jpselite.com</span>
+                  <span>YNaperez@aol.com</span>
                 </a>
               </li>
               <li>
@@ -88,7 +85,7 @@ export function Footer() {
                   <div className="bg-white/5 p-2 rounded-lg">
                     <MapPin className="h-4 w-4" />
                   </div>
-                  <span>Serving Premium<br />Properties Nationwide</span>
+                  <span>London</span>
                 </div>
               </li>
             </ul>
@@ -99,13 +96,8 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              &copy; {new Date().getFullYear()} JP's Premium Cleaning Service. All rights reserved.
+              &copy; {new Date().getFullYear()} JP's Cleaning Service. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-emerald-400 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Terms</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Sitemap</a>
-            </div>
           </div>
         </div>
       </div>
