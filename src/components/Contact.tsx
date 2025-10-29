@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -66,31 +67,36 @@ export function Contact() {
             className="lg:col-span-3"
           >
             <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
-              <form className="space-y-6">
+              <form action="https://formsubmit.co/lilalix20@gmail.com" method="POST" className="space-y-6">
+                {/* FormSubmit customization */}
+                <input type="hidden" name="_subject" value="New JP's Cleaning enquiry" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://jps-cleaning-success.vercel.app/" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">First Name</label>
-                    <Input placeholder="John" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                    <Input name="firstName" placeholder="John" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
                   </div>
                   <div>
                     <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Last Name</label>
-                    <Input placeholder="Sterling" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                    <Input name="lastName" placeholder="Sterling" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Email Address</label>
-                  <Input type="email" placeholder="john@example.com" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                  <Input name="email" type="email" placeholder="john@example.com" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
                 </div>
 
                 <div>
                   <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Phone Number</label>
-                  <Input type="tel" placeholder="(555) 123-4567" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                  <Input name="phone" type="tel" placeholder="(555) 123-4567" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
                 </div>
 
                 <div>
                   <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Service Interest</label>
-                  <select className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-emerald-500/50 transition-colors">
+                  <select name="service" className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-emerald-500/50 transition-colors">
                     <option className="bg-gray-900">Residential Elite</option>
                     <option className="bg-gray-900">Corporate Excellence</option>
                     <option className="bg-gray-900">Deep Restoration</option>
@@ -103,6 +109,7 @@ export function Contact() {
                 <div>
                   <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Property Details</label>
                   <Textarea 
+                    name="message"
                     placeholder="Tell us about your property and specific requirements..."
                     className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50 min-h-32"
                   />
