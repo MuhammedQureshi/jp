@@ -97,12 +97,11 @@ export function Contact() {
                 <div>
                   <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Service Interest</label>
                   <select name="service" className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-emerald-500/50 transition-colors">
-                    <option className="bg-gray-900">Residential Elite</option>
-                    <option className="bg-gray-900">Corporate Excellence</option>
-                    <option className="bg-gray-900">Deep Restoration</option>
-                    <option className="bg-gray-900">Crystal Windows</option>
-                    <option className="bg-gray-900">Upholstery Care</option>
-                    <option className="bg-gray-900">Concierge Service</option>
+                    <option className="bg-gray-900">General Cleaning</option>
+                    <option className="bg-gray-900">Deep Cleaning</option>
+                    <option className="bg-gray-900">End of Tenancy Cleaning</option>
+                    <option className="bg-gray-900">Carpet & Steam Cleaning</option>
+                    <option className="bg-gray-900">Window Cleaning</option>
                   </select>
                 </div>
 
