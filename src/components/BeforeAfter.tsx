@@ -16,7 +16,6 @@ const comparisons = [
     title: 'Kitchen Deep Clean',
     before: 'https://images.unsplash.com/photo-1578177154072-bbbd429d496f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXNzeSUyMGtpdGNoZW4lMjBiZWZvcmV8ZW58MXx8fHwxNzYxNzUzNjI0fDA&ixlib=rb-4.1.0&q=80&w=1080',
     after: 'https://images.unsplash.com/photo-1609741891824-2acea53d6676?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG90bGVzcyUyMGtpdGNoZW58ZW58MXx8fHwxNzYxNzUzNjI0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    after: 'https://images.unsplash.com/photo-1672757685171-190853353acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwaG9tZXxlbnwxfHx8fDE3NjE2NTgwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     description: 'Professional deep clean with eco-friendly products',
   },
   {
