@@ -147,7 +147,7 @@ export function BeforeAfter() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto"
         >
           {[
-            { value: '10K+', label: 'Transformations' },
+            { value: '100+', label: 'Transformations' },
             { value: '4.9★', label: 'Average Rating' },
             { value: '98%', label: 'Satisfaction Rate' },
             { value: '24/7', label: 'Available' },
