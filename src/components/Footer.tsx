@@ -1,0 +1,114 @@
+import { Crown, Mail, Phone, MapPin } from 'lucide-react';
+
+export function Footer() {
+  return (
+    <footer className="bg-black border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-2.5 rounded-xl">
+                <Crown className="h-7 w-7 text-black" />
+              </div>
+              <div>
+                <span className="block text-xl text-white">JP's</span>
+                <span className="block text-xs text-emerald-400 tracking-widest uppercase -mt-1">Premium Cleaning</span>
+              </div>
+            </div>
+            <p className="text-gray-500 mb-6 leading-relaxed">
+              Setting the standard for luxury cleaning services since 2009.
+            </p>
+            <div className="flex gap-3">
+              {['facebook', 'instagram', 'linkedin', 'twitter'].map((social) => (
+                <a 
+                  key={social}
+                  href="#" 
+                  className="w-10 h-10 rounded-lg bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 flex items-center justify-center transition-all duration-300"
+                >
+                  <span className="text-gray-400 hover:text-emerald-400 transition-colors">
+                    {social.charAt(0).toUpperCase()}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white mb-6 tracking-wider">Premium Services</h3>
+            <ul className="space-y-3 text-gray-500">
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Residential Elite</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Corporate Excellence</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Deep Restoration</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Crystal Windows</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Upholstery Care</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Concierge Service</a></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-white mb-6 tracking-wider">Company</h3>
+            <ul className="space-y-3 text-gray-500">
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Our Story</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Press</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white mb-6 tracking-wider">Contact</h3>
+            <ul className="space-y-4">
+              <li>
+                <a href="tel:5551234567" className="flex items-center gap-3 text-gray-500 hover:text-emerald-400 transition-colors group">
+                  <div className="bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                    <Phone className="h-4 w-4" />
+                  </div>
+                  <span>(555) 123-4567</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:concierge@jpselite.com" className="flex items-center gap-3 text-gray-500 hover:text-emerald-400 transition-colors group">
+                  <div className="bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                    <Mail className="h-4 w-4" />
+                  </div>
+                  <span>concierge@jpselite.com</span>
+                </a>
+              </li>
+              <li>
+                <div className="flex items-start gap-3 text-gray-500">
+                  <div className="bg-white/5 p-2 rounded-lg">
+                    <MapPin className="h-4 w-4" />
+                  </div>
+                  <span>Serving Premium<br />Properties Nationwide</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">
+              &copy; {new Date().getFullYear()} JP's Premium Cleaning Service. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-sm text-gray-500">
+              <a href="#" className="hover:text-emerald-400 transition-colors">Privacy</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors">Terms</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
