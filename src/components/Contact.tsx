@@ -76,7 +76,7 @@ export function Contact() {
           >
             <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
               <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
-                <Widget id="f8JUClD0" style={{ width: '100%', height: '300px' }} className="rounded-xl border-none shadow-none" />
+                <Widget id="f8JUClD0" style={{ width: '100%', height: '600px' }} className="rounded-xl border-none shadow-none" />
               </Card>
             </Card>
           </motion.div>
