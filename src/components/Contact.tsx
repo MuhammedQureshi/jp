@@ -24,7 +24,13 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Availability',
-    details: 'Mon - Fri: 8am - 6pm',
+    details: [
+      'Monday: 8am - 6pm',
+      'Tuesday: 8am - 6pm',
+      'Wednesday: 8am - 6pm',
+      'Thursday: 8am - 6pm',
+      'Friday : 8am - 6pm',
+    ],
     subddetails: '',
     link: '#',
   },
@@ -157,7 +163,15 @@ export function Contact() {
                     </div>
                     <div>
                       <h4 className="text-gray-400 text-sm mb-1">{info.title}</h4>
-                      <p className="text-white mb-1">{info.details}</p>
+                      {Array.isArray(info.details) ? (
+                        <ul className="text-white mb-1 text-sm">
+                          {info.details.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-white mb-1">{info.details}</p>
+                      )}
                       <p className="text-gray-500 text-sm">{info.subddetails}</p>
                     </div>
                   </div>
