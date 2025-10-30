@@ -74,11 +74,17 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
-              <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
-                <Widget id="f8JUClD0" style={{ width: '100%', height: '600px' }} className="rounded-xl border-none shadow-none" />
-              </Card>
-            </Card>
+              <div className="w-full min-h-screen">
+                <Widget
+                  id="f8JUClD0"
+                  style={{
+                    width: '100%',
+                    height: '100vh', // super tall on mobile
+                    minHeight: '600px',
+                  }}
+                  className="rounded-xl border-none shadow-none"
+                />
+              </div>
           </motion.div>
 
           {/* Contact Info */}
