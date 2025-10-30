@@ -74,17 +74,68 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-              <div className="w-full min-h-screen">
-                <Widget
-                  id="f8JUClD0"
-                  style={{
-                    width: '100%',
-                    height: '100vh', // super tall on mobile
-                    minHeight: '600px',
-                  }}
-                  className="rounded-xl border-none shadow-none"
-                />
-              </div>
+            <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
+              <form action="https://formspree.io/f/mrbolyvn" method="POST" className="space-y-6">
+                {/* FormSubmit customization */}
+                <input type="hidden" name="_subject" value="New JP's Cleaning enquiry" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://jps-cleaning-success.vercel.app/" />
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">First Name</label>
+                    <Input name="firstName" placeholder="John" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Last Name</label>
+                    <Input name="lastName" placeholder="Sterling" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Email Address</label>
+                  <Input name="email" type="email" placeholder="john@example.com" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                </div>
+
+                <div>
+                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Phone Number</label>
+                  <Input name="phone" type="tel" placeholder="(555) 123-4567" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                </div>
+
+                <div>
+                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Service Interest</label>
+                  <select name="service" className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-emerald-500/50 transition-colors">
+                    <option className="bg-gray-900">General Cleaning</option>
+                    <option className="bg-gray-900">Deep Cleaning</option>
+                    <option className="bg-gray-900">End of Tenancy Cleaning</option>
+                    <option className="bg-gray-900">Carpet & Steam Cleaning</option>
+                    <option className="bg-gray-900">Window Cleaning</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Property Details</label>
+                  <Textarea 
+                    name="message"
+                    placeholder="Tell us about your property and specific requirements..."
+                    className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50 min-h-32"
+                  />
+                </div>
+
+                <Button 
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-600 hover:from-emerald-600 hover:via-green-600 hover:to-emerald-700 text-black shadow-lg shadow-emerald-500/50 group"
+                  size="lg"
+                >
+                  Schedule Consultation
+                  <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+
+                <p className="text-gray-500 text-sm text-center">
+                  By submitting, you agree to our privacy policy and terms of service
+                </p>
+              </form>
+            </Card>
           </motion.div>
 
           {/* Contact Info */}
