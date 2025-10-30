@@ -79,7 +79,7 @@ export function Contact() {
                 {/* FormSubmit customization */}
                 <input type="hidden" name="_subject" value="New JP's Cleaning enquiry" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_captcha" value="false" />x
                 <input type="hidden" name="_next" value="https://jps-cleaning-success.vercel.app/" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
