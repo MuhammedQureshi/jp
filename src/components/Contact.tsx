@@ -31,7 +31,7 @@ const contactInfo = [
       'Tuesday: 8am - 6pm',
       'Wednesday: 8am - 6pm',
       'Thursday: 8am - 6pm',
-      'Friday : 8am - 6pm',
+      'Friday: 8am - 6pm',
     ],
     subddetails: '',
     link: '#',
@@ -40,9 +40,9 @@ const contactInfo = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-32 bg-black relative overflow-hidden">
+    <section id="contact" className="py-32 relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.05),transparent_70%)]"></div>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(59,130,246,0.05), transparent 70%)' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -53,14 +53,14 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/30 rounded-full mb-6">
-            <Send className="h-4 w-4 text-emerald-400" />
-            <span className="text-emerald-400 text-sm tracking-wider uppercase">Get in Touch</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border" style={{ background: 'linear-gradient(to right, rgba(219,234,254,0.8), rgba(191,219,254,0.8))', borderColor: '#93c5fd' }}>
+            <Send className="h-4 w-4" style={{ color: '#2563eb' }} />
+            <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Get in Touch</span>
           </div>
-          <h2 className="text-5xl md:text-6xl text-white mb-6">
+          <h2 className="text-5xl md:text-6xl mb-6" style={{ color: '#111827' }}>
             Begin Your Experience
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#4b5563' }}>
             Schedule a consultation with our concierge team and discover the difference
           </p>
         </motion.div>
@@ -74,64 +74,95 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <Card className="p-10 border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl">
+            <Card className="p-10 backdrop-blur-xl border" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }}>
               <form action="https://formspree.io/f/mrbolyvn" method="POST" className="space-y-6">
                 {/* FormSubmit customization */}
                 <input type="hidden" name="_subject" value="New JP's Cleaning enquiry" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />x
+                <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="https://jps-cleaning-success.vercel.app/" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">First Name</label>
-                    <Input name="firstName" placeholder="John" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                    <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>First Name</label>
+                    <Input 
+                      name="firstName" 
+                      placeholder="John" 
+                      required 
+                      className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
+                      style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                    />
                   </div>
                   <div>
-                    <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Last Name</label>
-                    <Input name="lastName" placeholder="Sterling" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                    <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Last Name</label>
+                    <Input 
+                      name="lastName" 
+                      placeholder="Sterling" 
+                      required 
+                      className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
+                      style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                    />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Email Address</label>
-                  <Input name="email" type="email" placeholder="john@example.com" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Email Address</label>
+                  <Input 
+                    name="email" 
+                    type="email" 
+                    placeholder="john@example.com" 
+                    required 
+                    className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
+                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Phone Number</label>
-                  <Input name="phone" type="tel" placeholder="(555) 123-4567" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50" />
+                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Phone Number</label>
+                  <Input 
+                    name="phone" 
+                    type="tel" 
+                    placeholder="(555) 123-4567" 
+                    className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
+                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Service Interest</label>
-                  <select name="service" className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-emerald-500/50 transition-colors">
-                    <option className="bg-gray-900">General Cleaning</option>
-                    <option className="bg-gray-900">Deep Cleaning</option>
-                    <option className="bg-gray-900">End of Tenancy Cleaning</option>
-                    <option className="bg-gray-900">Carpet & Steam Cleaning</option>
-                    <option className="bg-gray-900">Window Cleaning</option>
+                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Service Interest</label>
+                  <select 
+                    name="service" 
+                    className="w-full px-4 py-3 border rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }}
+                  >
+                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>General Cleaning</option>
+                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>Deep Cleaning</option>
+                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>End of Tenancy Cleaning</option>
+                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>Carpet & Steam Cleaning</option>
+                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>Window Cleaning</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 mb-3 text-sm tracking-wider uppercase">Property Details</label>
+                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Property Details</label>
                   <Textarea 
                     name="message"
                     placeholder="Tell us about your property and specific requirements..."
-                    className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-emerald-500/50 min-h-32"
+                    className="border rounded-lg px-4 py-3 min-h-32 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500"
+                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }}
                   />
                 </div>
 
                 <Button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-600 hover:from-emerald-600 hover:via-green-600 hover:to-emerald-700 text-black shadow-lg shadow-emerald-500/50 group"
+                  className="w-full text-white shadow-lg group"
                   size="lg"
+                  style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8)', boxShadow: '0 10px 15px -3px rgba(59,130,246,0.5)' }}
                 >
                   Schedule Consultation
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
-                <p className="text-gray-500 text-sm text-center">
+                <p className="text-sm text-center" style={{ color: '#6b7280' }}>
                   By submitting, you agree to our privacy policy and terms of service
                 </p>
               </form>
@@ -157,24 +188,27 @@ export function Contact() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
-                  className="block p-6 bg-gradient-to-br from-white/5 to-white/0 border border-white/10 rounded-2xl backdrop-blur-xl hover:border-emerald-500/50 transition-all duration-300 group"
+                  className="block p-6 rounded-2xl backdrop-blur-xl transition-all duration-300 group border"
+                  style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }}
+                  onMouseEnter={(e) => e.currentTarget.style.borderColor = '#3b82f6'}
+                  onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e0f2fe'}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-3 rounded-xl group-hover:scale-110 transition-transform">
-                      <Icon className="h-5 w-5 text-black" />
+                    <div className="p-3 rounded-xl group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
+                      <Icon className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-gray-400 text-sm mb-1">{info.title}</h4>
+                      <h4 className="text-sm mb-1" style={{ color: '#4b5563' }}>{info.title}</h4>
                       {Array.isArray(info.details) ? (
-                        <ul className="text-white mb-1 text-sm">
+                        <ul className="mb-1 text-sm" style={{ color: '#111827' }}>
                           {info.details.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-white mb-1">{info.details}</p>
+                        <p className="mb-1" style={{ color: '#111827' }}>{info.details}</p>
                       )}
-                      <p className="text-gray-500 text-sm">{info.subddetails}</p>
+                      <p className="text-sm" style={{ color: '#6b7280' }}>{info.subddetails}</p>
                     </div>
                   </div>
                 </motion.a>

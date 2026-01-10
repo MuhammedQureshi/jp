@@ -29,9 +29,9 @@ const comparisons = [
 
 export function BeforeAfter() {
   return (
-    <section id="before-after" className="py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+    <section id="before-after" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #ffffff, #eff6ff, #ffffff)' }}>
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.05),transparent_70%)]"></div>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(59,130,246,0.05), transparent 70%)' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -42,14 +42,14 @@ export function BeforeAfter() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/30 rounded-full mb-6">
-            <Sparkles className="h-4 w-4 text-emerald-400" />
-            <span className="text-emerald-400 text-sm tracking-wider uppercase">Transformations</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border" style={{ background: 'linear-gradient(to right, rgba(219,234,254,0.8), rgba(191,219,254,0.8))', borderColor: '#93c5fd' }}>
+            <Sparkles className="h-4 w-4" style={{ color: '#2563eb' }} />
+            <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Transformations</span>
           </div>
-          <h2 className="text-5xl md:text-6xl text-white mb-6">
+          <h2 className="text-5xl md:text-6xl mb-6" style={{ color: '#111827' }}>
             See The Difference
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#4b5563' }}>
             Witness the remarkable transformations we deliver.
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export function BeforeAfter() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
             >
-              <Card className="overflow-hidden border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl p-8">
+              <Card className="overflow-hidden backdrop-blur-xl p-8 border" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }}>
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   {/* Image */}
                   <div>
@@ -80,53 +80,56 @@ export function BeforeAfter() {
                   {/* Info */}
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-3xl text-white mb-4">{comparison.title}</h3>
-                      <p className="text-gray-400 text-lg leading-relaxed">
+                      <h3 className="text-3xl mb-4" style={{ color: '#111827' }}>{comparison.title}</h3>
+                      <p className="text-lg leading-relaxed" style={{ color: '#4b5563' }}>
                         {comparison.description}
                       </p>
                     </div>
 
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
-                        <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-2 rounded-lg flex-shrink-0 mt-1">
+                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
                           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="text-white mb-1">Professional Results</h4>
-                          <p className="text-gray-500 text-sm">Industry-leading techniques and equipment</p>
+                          <h4 className="mb-1" style={{ color: '#111827' }}>Professional Results</h4>
+                          <p className="text-sm" style={{ color: '#6b7280' }}>Industry-leading techniques and equipment</p>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-3">
-                        <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-2 rounded-lg flex-shrink-0 mt-1">
+                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
                           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="text-white mb-1">Eco-Friendly Products</h4>
-                          <p className="text-gray-500 text-sm">Safe for your family and the environment</p>
+                          <h4 className="mb-1" style={{ color: '#111827' }}>Eco-Friendly Products</h4>
+                          <p className="text-sm" style={{ color: '#6b7280' }}>Safe for your family and the environment</p>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-3">
-                        <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-2 rounded-lg flex-shrink-0 mt-1">
+                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
                           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="text-white mb-1">Satisfaction Guaranteed</h4>
-                          <p className="text-gray-500 text-sm">100% quality assurance on every service</p>
+                          <h4 className="mb-1" style={{ color: '#111827' }}>Satisfaction Guaranteed</h4>
+                          <p className="text-sm" style={{ color: '#6b7280' }}>100% quality assurance on every service</p>
                         </div>
                       </div>
                     </div>
 
                     <a
                       href="#contact"
-                      className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors group/link mt-4"
+                      className="inline-flex items-center transition-colors group/link mt-4"
+                      style={{ color: '#2563eb' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#1d4ed8'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#2563eb'}
                     >
                       <span>Book This Service</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
@@ -153,10 +156,10 @@ export function BeforeAfter() {
             { value: '24/7', label: 'Available' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent mb-2">
+              <div className="text-4xl mb-2 bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #60a5fa, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {stat.value}
               </div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-sm" style={{ color: '#4b5563' }}>{stat.label}</div>
             </div>
           ))}
         </motion.div>
