@@ -1,5 +1,5 @@
 import { Card } from './ui/card';
-import { Home, Building2, Sparkles, Wind, Sofa, ClipboardCheck } from 'lucide-react';
+import { Home, Sparkles, Wind, Sofa, ClipboardCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import React from 'react';
@@ -40,8 +40,7 @@ const services = [
     image: 'https://saubercare.co.uk/wp-content/uploads/2021/02/sauber-30-scaled.jpg',
     features: ['Streak-free shine', 'Interior & exterior cleaning', 'Frame & sill detailing', 'Chemical-free finish'],
   },
-  {
-    icon: Building2,
+  { icon: Home,
     title: 'Domestic & Commercial',
     description: 'Core domestic and commercial cleaning options for homes and businesses.',
     image: 'https://staffskillsacademy.co.uk/wp-content/uploads/2024/12/cleaning.jpg',
