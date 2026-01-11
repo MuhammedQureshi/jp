@@ -169,7 +169,7 @@ export function Testimonials() {
         </div>
 
         {/* Trust Indicators */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -189,7 +189,7 @@ export function Testimonials() {
               <div className="text-sm font-medium" style={{ color: '#FFFFFF' }}>{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
