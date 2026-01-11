@@ -2,6 +2,7 @@ import { Card } from './ui/card';
 import { Home, Building2, Sparkles, Wind, Sofa, ClipboardCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import React from 'react';
 
 const services = [
   {
@@ -38,6 +39,37 @@ const services = [
     description: 'Crystal-clear results inside and out using purified water and safe extension systems.',
     image: 'https://saubercare.co.uk/wp-content/uploads/2021/02/sauber-30-scaled.jpg',
     features: ['Streak-free shine', 'Interior & exterior cleaning', 'Frame & sill detailing', 'Chemical-free finish'],
+  },
+  {
+    icon: Building2,
+    title: 'Domestic & Commercial',
+    description: 'Core domestic and commercial cleaning options for homes and businesses.',
+    image: 'https://staffskillsacademy.co.uk/wp-content/uploads/2024/12/cleaning.jpg',
+    features: [
+      'Domestic Cleaning',
+      'Commercial Cleaning',
+      'Shops & Factories',
+      'Public Buildings',
+      'Schools & Colleges',
+      'Pubs & Cafes Cleaning',
+      'Restaurant Cleaning',
+      'Commercial Carpet Cleaning',
+    ],
+  },
+  {
+    icon: Home,
+    title: 'Specialist & One-off',
+    description: 'Specialist and one-off cleans tailored to specific needs and industries.',
+    image: 'https://www.thesparklegang.uk/wp-content/uploads/2023/06/Get-in-touch-with-us-today.jpg',
+    features: [
+      'Domestic Carpet Cleaning',
+      'After Builders Cleaning',
+      'Deep Cleaning',
+      'End of Tenancy Cleaning',
+      'Office Cleaning',
+      'Surgery Cleaning',
+      'Retail Cleaning',
+    ],
   },
 ];
 
@@ -137,9 +169,9 @@ export function Services() {
     </section>
   );
 }
-
 const ArrowRight = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
   </svg>
 );
+
