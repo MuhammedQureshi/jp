@@ -12,7 +12,7 @@ export function Header() {
   const headerBg = useTransform(
     scrollY,
     [0, 100],
-    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.95)']
+    ['rgba(255, 255, 255, 0)', 'rgba(224, 242, 254, 0.95)']
   );
 
   useEffect(() => {
@@ -25,9 +25,9 @@ export function Header() {
 
   return (
     <motion.header 
-      style={{ backgroundColor: headerBg }}
+      style={{ backgroundColor: headerBg, ...(scrolled ? { borderBottom: '2px solid #7DD3FC' } : {}) }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'backdrop-blur-xl border-b border-gray-200 shadow-2xl' : ''
+        scrolled ? 'backdrop-blur-xl shadow-2xl' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,8 +49,8 @@ export function Header() {
             </div>
             <div>
               <a href="/">
-              <span className="block text-2xl tracking-tight text-gray-900">JP's</span>
-              <span className="block text-xs tracking-widest uppercase -mt-1" style={{ color: '#2563eb' }}>Cleaning Services</span>
+              <span className="block text-2xl tracking-tight font-bold" style={{ color: '#0284C7' }}>JP's</span>
+              <span className="block text-xs tracking-widest uppercase -mt-1 font-semibold" style={{ color: '#0EA5E9' }}>Cleaning Services</span>
               </a>
             </div>
           </motion.div>
@@ -64,13 +64,13 @@ export function Header() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.2 }}
-                className="text-gray-700 transition-colors duration-300 relative group"
-                style={{ color: '#374151' }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#2563eb'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+                className="transition-colors duration-300 relative group font-medium"
+                style={{ color: '#0284C7' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#0EA5E9'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#0284C7'}
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300" style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb)' }}></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300" style={{ background: 'linear-gradient(to right, #0EA5E9, #38BDF8)' }}></span>
               </motion.a>
             ))}
           </nav>
@@ -82,12 +82,12 @@ export function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <a href="tel:5551234567" className="transition-colors flex items-center gap-2" style={{ color: '#374151' }} onMouseEnter={(e) => e.currentTarget.style.color = '#2563eb'} onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}>
+            <a href="tel:5551234567" className="transition-colors flex items-center gap-2 font-medium" style={{ color: '#0284C7' }} onMouseEnter={(e) => e.currentTarget.style.color = '#0EA5E9'} onMouseLeave={(e) => e.currentTarget.style.color = '#0284C7'}>
               <Phone className="h-4 w-4" />
               <span>07411444292</span>
             </a>
             <a href="#contact">
-            <Button className="text-white shadow-lg transition-all duration-300" style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8)', boxShadow: '0 10px 15px -3px rgba(59, 130, 246, 0.5)' }}>
+            <Button className="text-white shadow-lg transition-all duration-300 font-semibold" style={{ background: 'linear-gradient(to right, #0284C7, #0EA5E9, #38BDF8)', boxShadow: '0 10px 15px -3px rgba(14, 165, 233, 0.5)' }}>
               Book Now
             </Button>
             </a>
@@ -107,23 +107,24 @@ export function Header() {
           <motion.nav 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden py-6 px-4 rounded-2xl flex flex-col gap-4 border-t border-gray-200 bg-white"
+            className="lg:hidden py-6 px-4 rounded-2xl flex flex-col gap-4 border-t"
+            style={{ borderColor: '#7DD3FC', backgroundColor: 'rgba(224, 242, 254, 0.95)' }}
           >
             {['Services', 'Portfolio', 'Before & After', 'Testimonials'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(/ & /g, '-')}`}
-                className="transition-colors py-2"
-                style={{ color: '#374151' }}
+                className="transition-colors py-2 font-medium"
+                style={{ color: '#0284C7' }}
                 onClick={() => setIsMenuOpen(false)}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#2563eb'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#0EA5E9'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#0284C7'}
               >
                 {item}
               </a>
             ))}
             <a href="#contact">
-            <Button className="text-white w-full" style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb)' }}>
+            <Button className="text-white w-full font-semibold" style={{ background: 'linear-gradient(to right, #0284C7, #0EA5E9)' }}>
               Book Now
             </Button>
             </a>

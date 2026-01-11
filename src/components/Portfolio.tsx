@@ -35,9 +35,9 @@ const portfolio = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-32 relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
+    <section id="portfolio" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0EA5E9 0%, #38BDF8 25%, #7DD3FC 50%, #BAE6FD 75%, #E0F2FE 100%)' }}>
       {/* Background Elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(59,130,246,0.1)' }}></div>
+      <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -48,14 +48,14 @@ export function Portfolio() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border" style={{ background: 'linear-gradient(to right, rgba(219,234,254,0.8), rgba(191,219,254,0.8))', borderColor: '#93c5fd' }}>
-            <ExternalLink className="h-4 w-4" style={{ color: '#2563eb' }} />
-            <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Our Work</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', borderColor: '#7DD3FC', boxShadow: '0 4px 20px rgba(14,165,233,0.3)' }}>
+            <ExternalLink className="h-4 w-4" style={{ color: '#0EA5E9' }} />
+            <span className="text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Our Work</span>
           </div>
-          <h2 className="text-5xl md:text-6xl mb-6" style={{ color: '#111827' }}>
+          <h2 className="text-5xl md:text-6xl mb-6 font-bold drop-shadow-lg" style={{ color: '#FFFFFF' }}>
             Portfolio of Excellence
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#4b5563' }}>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed drop-shadow-md" style={{ color: '#E0F2FE' }}>
             A preview of the spaces that reflect our standard of excellence.
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export function Portfolio() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
             >
-              <Card className="group relative overflow-hidden backdrop-blur-xl transition-all duration-500 border" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }} onMouseEnter={(e) => e.currentTarget.style.borderColor = '#3b82f6'} onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e0f2fe'}>
+              <Card className="group relative overflow-hidden backdrop-blur-xl transition-all duration-500 border shadow-xl" style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#7DD3FC', boxShadow: '0 10px 30px rgba(14,165,233,0.2)' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#0EA5E9'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(14,165,233,0.4)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#7DD3FC'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(14,165,233,0.2)'; }}>
                 <div className="relative h-96 overflow-hidden">
                   <ImageWithFallback
                     src={project.image}
@@ -81,14 +81,14 @@ export function Portfolio() {
                   
                   {/* Overlay Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <span className="inline-block px-3 py-1 border text-sm rounded-full mb-3" style={{ backgroundColor: 'rgba(59,130,246,0.2)', borderColor: '#3b82f6', color: '#2563eb' }}>
+                    <span className="inline-block px-3 py-1 border text-sm rounded-full mb-3 font-semibold" style={{ backgroundColor: 'rgba(14,165,233,0.3)', borderColor: '#7DD3FC', color: '#FFFFFF' }}>
                       {project.category}
                     </span>
-                    <h3 className="text-2xl mb-2" style={{ color: '#ffffff' }}>{project.title}</h3>
+                    <h3 className="text-2xl mb-2 font-bold" style={{ color: '#FFFFFF' }}>{project.title}</h3>
                   </div>
 
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(59,130,246,0.3), transparent)' }}></div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(14,165,233,0.3), transparent)' }}></div>
                 </div>
               </Card>
             </motion.div>

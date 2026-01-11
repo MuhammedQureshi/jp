@@ -29,9 +29,9 @@ const comparisons = [
 
 export function BeforeAfter() {
   return (
-    <section id="before-after" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #ffffff, #eff6ff, #ffffff)' }}>
+    <section id="before-after" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 25%, #38BDF8 50%, #0EA5E9 75%, #0284C7 100%)' }}>
       {/* Background Elements */}
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(59,130,246,0.05), transparent 70%)' }}></div>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%)' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -42,14 +42,14 @@ export function BeforeAfter() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border" style={{ background: 'linear-gradient(to right, rgba(219,234,254,0.8), rgba(191,219,254,0.8))', borderColor: '#93c5fd' }}>
-            <Sparkles className="h-4 w-4" style={{ color: '#2563eb' }} />
-            <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Transformations</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', borderColor: '#7DD3FC', boxShadow: '0 4px 20px rgba(14,165,233,0.3)' }}>
+            <Sparkles className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
+            <span className="text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Transformations</span>
           </div>
-          <h2 className="text-5xl md:text-6xl mb-6" style={{ color: '#111827' }}>
+          <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0284C7', textShadow: '0 2px 10px rgba(255,255,255,0.8)' }}>
             See The Difference
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#4b5563' }}>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#0369A1', textShadow: '0 1px 5px rgba(255,255,255,0.6)' }}>
             Witness the remarkable transformations we deliver.
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export function BeforeAfter() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
             >
-              <Card className="overflow-hidden backdrop-blur-xl p-8 border" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }}>
+              <Card className="overflow-hidden backdrop-blur-xl p-8 border shadow-xl" style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#7DD3FC', boxShadow: '0 10px 30px rgba(14,165,233,0.2)' }}>
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   {/* Image */}
                   <div>
@@ -80,56 +80,56 @@ export function BeforeAfter() {
                   {/* Info */}
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-3xl mb-4" style={{ color: '#111827' }}>{comparison.title}</h3>
-                      <p className="text-lg leading-relaxed" style={{ color: '#4b5563' }}>
+                      <h3 className="text-3xl mb-4 font-bold" style={{ color: '#0284C7' }}>{comparison.title}</h3>
+                      <p className="text-lg leading-relaxed font-medium" style={{ color: '#0369A1' }}>
                         {comparison.description}
                       </p>
                     </div>
 
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
-                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
+                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #0284C7, #0EA5E9, #38BDF8)' }}>
                           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="mb-1" style={{ color: '#111827' }}>Professional Results</h4>
-                          <p className="text-sm" style={{ color: '#6b7280' }}>Industry-leading techniques and equipment</p>
+                          <h4 className="mb-1 font-bold" style={{ color: '#0284C7' }}>Professional Results</h4>
+                          <p className="text-sm font-medium" style={{ color: '#0EA5E9' }}>Industry-leading techniques and equipment</p>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-3">
-                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
+                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #0284C7, #0EA5E9, #38BDF8)' }}>
                           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="mb-1" style={{ color: '#111827' }}>Eco-Friendly Products</h4>
-                          <p className="text-sm" style={{ color: '#6b7280' }}>Safe for your family and the environment</p>
+                          <h4 className="mb-1 font-bold" style={{ color: '#0284C7' }}>Eco-Friendly Products</h4>
+                          <p className="text-sm font-medium" style={{ color: '#0EA5E9' }}>Safe for your family and the environment</p>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-3">
-                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
+                        <div className="p-2 rounded-lg flex-shrink-0 mt-1" style={{ background: 'linear-gradient(to bottom right, #0284C7, #0EA5E9, #38BDF8)' }}>
                           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
-                          <h4 className="mb-1" style={{ color: '#111827' }}>Satisfaction Guaranteed</h4>
-                          <p className="text-sm" style={{ color: '#6b7280' }}>100% quality assurance on every service</p>
+                          <h4 className="mb-1 font-bold" style={{ color: '#0284C7' }}>Satisfaction Guaranteed</h4>
+                          <p className="text-sm font-medium" style={{ color: '#0EA5E9' }}>100% quality assurance on every service</p>
                         </div>
                       </div>
                     </div>
 
                     <a
                       href="#contact"
-                      className="inline-flex items-center transition-colors group/link mt-4"
-                      style={{ color: '#2563eb' }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = '#1d4ed8'}
-                      onMouseLeave={(e) => e.currentTarget.style.color = '#2563eb'}
+                      className="inline-flex items-center transition-colors group/link mt-4 font-semibold"
+                      style={{ color: '#0284C7' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#0EA5E9'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#0284C7'}
                     >
                       <span>Book This Service</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
@@ -156,10 +156,10 @@ export function BeforeAfter() {
             { value: '24/7', label: 'Available' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl mb-2 bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #60a5fa, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <div className="text-4xl mb-2 bg-clip-text text-transparent font-bold" style={{ backgroundImage: 'linear-gradient(to right, #0284C7, #0EA5E9, #38BDF8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {stat.value}
               </div>
-              <div className="text-sm" style={{ color: '#4b5563' }}>{stat.label}</div>
+              <div className="text-sm font-medium" style={{ color: '#0369A1' }}>{stat.label}</div>
             </div>
           ))}
         </motion.div>

@@ -9,18 +9,22 @@ export function Hero() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(to bottom right, #eff6ff, #ffffff, #eff6ff)' }}>
+    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(to bottom right, #f0f9ff, #ffffff, #f0f9ff)' }}>
       {/* Parallax Background with Logo */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* Logo Background - visible and properly sized */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img 
             src="/1.jpeg" 
             alt="JP's Cleaning Services Logo" 
-            className="w-100 h-100 object-cover opacity-20"
+            className="max-w-[800px] w-200 h-auto object-cover opacity-15"
+            style={{ maxHeight: '90vh' }}
           />
         </div>
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(239,246,255,0.9), rgba(255,255,255,0.95), rgba(239,246,255,0.9))' }}></div>
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top right, rgba(59,130,246,0.08), transparent 50%)' }}></div>
+        {/* Soft overlay gradients */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(240,249,255,0.85), rgba(255,255,255,0.92), rgba(240,249,255,0.85))' }}></div>
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top right, rgba(125,211,252,0.12), transparent 60%)' }}></div>
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at bottom left, rgba(135,206,235,0.08), transparent 50%)' }}></div>
       </motion.div>
 
       {/* Floating Particles */}
@@ -29,7 +33,7 @@ export function Hero() {
           <motion.div
             key={i}
             className="absolute w-1 h-1 rounded-full"
-            style={{ backgroundColor: '#60a5fa' }}
+            style={{ backgroundColor: '#7DD3FC' }}
             initial={{ 
               x: Math.random() * window.innerWidth, 
               y: Math.random() * window.innerHeight,
@@ -37,7 +41,7 @@ export function Hero() {
             }}
             animate={{ 
               y: [null, Math.random() * -500],
-              opacity: [0, 0.5, 0]
+              opacity: [0, 0.4, 0]
             }}
             transition={{ 
               duration: Math.random() * 10 + 10, 
@@ -58,10 +62,10 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 backdrop-blur-sm border"
-              style={{ background: 'linear-gradient(to right, #dbeafe, #bfdbfe)', borderColor: '#93c5fd' }}
+              style={{ background: 'linear-gradient(to right, #e0f2fe, #bae6fd)', borderColor: '#7DD3FC' }}
             >
-              <Star className="h-4 w-4" style={{ color: '#2563eb', fill: '#2563eb' }} />
-              <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Cleaning Services</span>
+              <Star className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
+              <span className="text-sm tracking-wider uppercase font-medium" style={{ color: '#0284C7' }}>Cleaning Services</span>
             </motion.div>
 
             {/* Headline */}
@@ -69,10 +73,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-7xl lg:text-8xl mb-6"
+              className="text-6xl md:text-7xl lg:text-8xl mb-6 font-bold"
             >
               <span className="block text-gray-900">Elegance</span>
-              <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #0EA5E9, #0284C7, #0369A1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Redefined
               </span>
             </motion.h1>
@@ -99,10 +103,10 @@ export function Hero() {
                 { icon: Sparkles, label: '5-Star Rated' }
               ].map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="rounded-2xl p-4 backdrop-blur-sm mb-2 inline-flex border" style={{ background: 'linear-gradient(to bottom right, #dbeafe, #bfdbfe)', borderColor: '#93c5fd' }}>
-                    <item.icon className="h-6 w-6" style={{ color: '#2563eb' }} />
+                  <div className="rounded-2xl p-4 backdrop-blur-sm mb-2 inline-flex border shadow-sm" style={{ background: 'linear-gradient(to bottom right, #e0f2fe, #bae6fd)', borderColor: '#7DD3FC' }}>
+                    <item.icon className="h-6 w-6" style={{ color: '#0EA5E9' }} />
                   </div>
-                  <p className="text-gray-600 text-sm">{item.label}</p>
+                  <p className="text-gray-600 text-sm font-medium">{item.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -117,8 +121,8 @@ export function Hero() {
               <a href="#services">
               <Button 
                 size="lg"
-                className="w-full text-white shadow-2xl transition-all duration-300 group"
-                style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8)', boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.5)' }}
+                className="w-full text-white shadow-2xl transition-all duration-300 group font-semibold"
+                style={{ background: 'linear-gradient(to right, #0EA5E9, #0284C7, #0369A1)', boxShadow: '0 25px 50px -12px rgba(14, 165, 233, 0.4)' }}
               >
                 Reserve Your Service
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -128,8 +132,8 @@ export function Hero() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="w-full backdrop-blur-sm border"
-                style={{ borderColor: '#3b82f6', color: '#2563eb' }}
+                className="w-full backdrop-blur-sm border-2 font-semibold"
+                style={{ borderColor: '#0EA5E9', color: '#0284C7', background: 'rgba(255,255,255,0.8)' }}
               >
                 View Portfolio
               </Button>
@@ -153,11 +157,11 @@ export function Hero() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className={`absolute ${stat.position} w-48`}
               >
-                <div className="backdrop-blur-xl rounded-3xl p-6 border shadow-2xl" style={{ background: 'linear-gradient(to bottom right, #ffffff, #eff6ff)', borderColor: '#bfdbfe' }}>
-                  <div className="text-5xl bg-clip-text text-transparent mb-2" style={{ backgroundImage: 'linear-gradient(to right, #3b82f6, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                <div className="backdrop-blur-xl rounded-3xl p-6 border shadow-2xl" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#bae6fd' }}>
+                  <div className="text-5xl bg-clip-text text-transparent mb-2 font-bold" style={{ backgroundImage: 'linear-gradient(to right, #0EA5E9, #0284C7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-sm">{stat.label}</div>
+                  <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -172,8 +176,8 @@ export function Hero() {
                 repeat: Infinity,
                 ease: "linear"
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border rounded-full"
-              style={{ borderColor: '#93c5fd' }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border rounded-full opacity-40"
+              style={{ borderColor: '#7DD3FC' }}
             ></motion.div>
             <motion.div
               animate={{ 
@@ -184,8 +188,8 @@ export function Hero() {
                 repeat: Infinity,
                 ease: "linear"
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border rounded-full"
-              style={{ borderColor: '#bfdbfe' }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border rounded-full opacity-50"
+              style={{ borderColor: '#BAE6FD' }}
             ></motion.div>
           </div>
         </div>
@@ -202,9 +206,9 @@ export function Hero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 border-2 rounded-full flex items-start justify-center p-2"
-          style={{ borderColor: '#3b82f6' }}
+          style={{ borderColor: '#0EA5E9' }}
         >
-          <motion.div className="w-1 h-2 rounded-full" style={{ backgroundColor: '#3b82f6' }}></motion.div>
+          <motion.div className="w-1 h-2 rounded-full" style={{ backgroundColor: '#0EA5E9' }}></motion.div>
         </motion.div>
       </motion.div>
     </section>

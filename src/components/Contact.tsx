@@ -40,9 +40,9 @@ const contactInfo = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-32 relative overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
+    <section id="contact" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #0EA5E9 100%)' }}>
       {/* Background Elements */}
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(59,130,246,0.05), transparent 70%)' }}></div>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%)' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -53,14 +53,14 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border" style={{ background: 'linear-gradient(to right, rgba(219,234,254,0.8), rgba(191,219,254,0.8))', borderColor: '#93c5fd' }}>
-            <Send className="h-4 w-4" style={{ color: '#2563eb' }} />
-            <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Get in Touch</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', borderColor: '#7DD3FC', boxShadow: '0 4px 20px rgba(14,165,233,0.3)' }}>
+            <Send className="h-4 w-4" style={{ color: '#0EA5E9' }} />
+            <span className="text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Get in Touch</span>
           </div>
-          <h2 className="text-5xl md:text-6xl mb-6" style={{ color: '#111827' }}>
+          <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0284C7', textShadow: '0 2px 10px rgba(255,255,255,0.8)' }}>
             Begin Your Experience
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#4b5563' }}>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#0369A1', textShadow: '0 1px 5px rgba(255,255,255,0.6)' }}>
             Schedule a consultation with our concierge team and discover the difference
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <Card className="p-10 backdrop-blur-xl border" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }}>
+            <Card className="p-10 backdrop-blur-xl border shadow-xl" style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#7DD3FC', boxShadow: '0 10px 30px rgba(14,165,233,0.2)' }}>
               <form action="https://formspree.io/f/mrbolyvn" method="POST" className="space-y-6">
                 {/* FormSubmit customization */}
                 <input type="hidden" name="_subject" value="New JP's Cleaning enquiry" />
@@ -83,86 +83,86 @@ export function Contact() {
                 <input type="hidden" name="_next" value="https://jps-cleaning-success.vercel.app/" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>First Name</label>
+                    <label className="block mb-3 text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>First Name</label>
                     <Input 
                       name="firstName" 
                       placeholder="John" 
                       required 
                       className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
-                      style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                      style={{ backgroundColor: '#E0F2FE', borderColor: '#7DD3FC', color: '#0284C7' }} 
                     />
                   </div>
                   <div>
-                    <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Last Name</label>
+                    <label className="block mb-3 text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Last Name</label>
                     <Input 
                       name="lastName" 
                       placeholder="Sterling" 
                       required 
                       className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
-                      style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                      style={{ backgroundColor: '#E0F2FE', borderColor: '#7DD3FC', color: '#0284C7' }} 
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Email Address</label>
+                  <label className="block mb-3 text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Email Address</label>
                   <Input 
                     name="email" 
                     type="email" 
                     placeholder="john@example.com" 
                     required 
                     className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
-                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                    style={{ backgroundColor: '#E0F2FE', borderColor: '#7DD3FC', color: '#0284C7' }} 
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Phone Number</label>
+                  <label className="block mb-3 text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Phone Number</label>
                   <Input 
                     name="phone" 
                     type="tel" 
                     placeholder="(555) 123-4567" 
                     className="border rounded-lg px-4 py-3 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500" 
-                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }} 
+                    style={{ backgroundColor: '#E0F2FE', borderColor: '#7DD3FC', color: '#0284C7' }} 
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Service Interest</label>
+                  <label className="block mb-3 text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Service Interest</label>
                   <select 
                     name="service" 
                     className="w-full px-4 py-3 border rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
-                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }}
+                    style={{ backgroundColor: '#E0F2FE', borderColor: '#7DD3FC', color: '#0284C7' }}
                   >
-                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>General Cleaning</option>
-                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>Deep Cleaning</option>
-                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>End of Tenancy Cleaning</option>
-                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>Carpet & Steam Cleaning</option>
-                    <option style={{ backgroundColor: '#ffffff', color: '#111827' }}>Window Cleaning</option>
+                    <option style={{ backgroundColor: '#FFFFFF', color: '#0284C7' }}>General Cleaning</option>
+                    <option style={{ backgroundColor: '#FFFFFF', color: '#0284C7' }}>Deep Cleaning</option>
+                    <option style={{ backgroundColor: '#FFFFFF', color: '#0284C7' }}>End of Tenancy Cleaning</option>
+                    <option style={{ backgroundColor: '#FFFFFF', color: '#0284C7' }}>Carpet & Steam Cleaning</option>
+                    <option style={{ backgroundColor: '#FFFFFF', color: '#0284C7' }}>Window Cleaning</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block mb-3 text-sm tracking-wider uppercase" style={{ color: '#4b5563' }}>Property Details</label>
+                  <label className="block mb-3 text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Property Details</label>
                   <Textarea 
                     name="message"
                     placeholder="Tell us about your property and specific requirements..."
                     className="border rounded-lg px-4 py-3 min-h-32 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500"
-                    style={{ backgroundColor: '#f8fafc', borderColor: '#e0f2fe', color: '#111827' }}
+                    style={{ backgroundColor: '#E0F2FE', borderColor: '#7DD3FC', color: '#0284C7' }}
                   />
                 </div>
 
                 <Button 
                   type="submit"
-                  className="w-full text-white shadow-lg group"
+                  className="w-full text-white shadow-lg group font-semibold"
                   size="lg"
-                  style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8)', boxShadow: '0 10px 15px -3px rgba(59,130,246,0.5)' }}
+                  style={{ background: 'linear-gradient(to right, #0284C7, #0EA5E9, #38BDF8)', boxShadow: '0 10px 15px -3px rgba(14,165,233,0.5)' }}
                 >
                   Schedule Consultation
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
-                <p className="text-sm text-center" style={{ color: '#6b7280' }}>
+                <p className="text-sm text-center font-medium" style={{ color: '#0EA5E9' }}>
                   By submitting, you agree to our privacy policy and terms of service
                 </p>
               </form>
@@ -188,27 +188,27 @@ export function Contact() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
-                  className="block p-6 rounded-2xl backdrop-blur-xl transition-all duration-300 group border"
-                  style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }}
-                  onMouseEnter={(e) => e.currentTarget.style.borderColor = '#3b82f6'}
-                  onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e0f2fe'}
+                  className="block p-6 rounded-2xl backdrop-blur-xl transition-all duration-300 group border shadow-lg"
+                  style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#7DD3FC', boxShadow: '0 10px 30px rgba(14,165,233,0.2)' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#0EA5E9'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(14,165,233,0.4)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#7DD3FC'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(14,165,233,0.2)'; }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)' }}>
+                    <div className="p-3 rounded-xl group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #0284C7, #0EA5E9, #38BDF8)' }}>
                       <Icon className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-sm mb-1" style={{ color: '#4b5563' }}>{info.title}</h4>
+                      <h4 className="text-sm mb-1 font-semibold" style={{ color: '#0284C7' }}>{info.title}</h4>
                       {Array.isArray(info.details) ? (
-                        <ul className="mb-1 text-sm" style={{ color: '#111827' }}>
+                        <ul className="mb-1 text-sm font-medium" style={{ color: '#0369A1' }}>
                           {info.details.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="mb-1" style={{ color: '#111827' }}>{info.details}</p>
+                        <p className="mb-1 font-medium" style={{ color: '#0369A1' }}>{info.details}</p>
                       )}
-                      <p className="text-sm" style={{ color: '#6b7280' }}>{info.subddetails}</p>
+                      <p className="text-sm font-medium" style={{ color: '#0EA5E9' }}>{info.subddetails}</p>
                     </div>
                   </div>
                 </motion.a>

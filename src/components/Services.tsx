@@ -44,9 +44,9 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #ffffff, #eff6ff, #ffffff)' }}>
+    <section id="services" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #0EA5E9 100%)' }}>
       {/* Background Elements */}
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(59,130,246,0.05), transparent 70%)' }}></div>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%)' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -57,14 +57,14 @@ export function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border" style={{ background: 'linear-gradient(to right, rgba(219,234,254,0.8), rgba(191,219,254,0.8))', borderColor: '#93c5fd' }}>
-            <Sparkles className="h-4 w-4" style={{ color: '#2563eb' }} />
-            <span className="text-sm tracking-wider uppercase" style={{ color: '#2563eb' }}>Premium Services</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', borderColor: '#7DD3FC', boxShadow: '0 4px 20px rgba(14,165,233,0.3)' }}>
+            <Sparkles className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
+            <span className="text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Premium Services</span>
           </div>
-          <h2 className="text-5xl md:text-6xl mb-6" style={{ color: '#111827' }}>
+          <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0284C7', textShadow: '0 2px 10px rgba(255,255,255,0.8)' }}>
             Curated Excellence
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#4b5563' }}>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#0369A1', textShadow: '0 1px 5px rgba(255,255,255,0.6)' }}>
             Each service meticulously crafted to exceed the expectations of the most discerning clientele
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ export function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <Card className="group relative overflow-hidden backdrop-blur-xl transition-all duration-500 h-full border" style={{ background: 'linear-gradient(to bottom right, #ffffff, #f0f9ff)', borderColor: '#e0f2fe' }} onMouseEnter={(e) => e.currentTarget.style.borderColor = '#3b82f6'} onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e0f2fe'}>
+                <Card className="group relative overflow-hidden backdrop-blur-xl transition-all duration-500 h-full border shadow-xl" style={{ background: 'rgba(255,255,255,0.95)', borderColor: '#7DD3FC', boxShadow: '0 10px 30px rgba(14,165,233,0.2)' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#0EA5E9'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(14,165,233,0.4)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#7DD3FC'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(14,165,233,0.2)'; }}>
                   {/* Image */}
                   <div className="relative h-64 overflow-hidden">
                     <ImageWithFallback
@@ -92,24 +92,24 @@ export function Services() {
                     <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(255,255,255,0.9), rgba(255,255,255,0.5), transparent)' }}></div>
                     
                     {/* Icon */}
-                    <div className="absolute top-6 right-6 p-3 rounded-2xl shadow-lg" style={{ background: 'linear-gradient(to bottom right, #3b82f6, #2563eb)', boxShadow: '0 10px 15px -3px rgba(59,130,246,0.5)' }}>
+                    <div className="absolute top-6 right-6 p-3 rounded-2xl shadow-lg" style={{ background: 'linear-gradient(to bottom right, #0284C7, #0EA5E9, #38BDF8)', boxShadow: '0 10px 15px -3px rgba(14,165,233,0.5)' }}>
                       <Icon className="h-6 w-6 text-white" />
                     </div>
 
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(59,130,246,0.3), transparent)' }}></div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgba(14,165,233,0.3), transparent)' }}></div>
                   </div>
 
                   {/* Content */}
                   <div className="p-8">
-                    <h3 className="text-2xl mb-3" style={{ color: '#111827' }}>{service.title}</h3>
-                    <p className="mb-6 leading-relaxed" style={{ color: '#4b5563' }}>{service.description}</p>
+                    <h3 className="text-2xl mb-3 font-bold" style={{ color: '#0284C7' }}>{service.title}</h3>
+                    <p className="mb-6 leading-relaxed" style={{ color: '#0369A1' }}>{service.description}</p>
                     
                     {/* Features */}
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6b7280' }}>
-                          <div className="w-1 h-1 rounded-full" style={{ backgroundColor: '#3b82f6' }}></div>
+                        <li key={i} className="flex items-center gap-2 text-sm font-medium" style={{ color: '#0EA5E9' }}>
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#38BDF8' }}></div>
                           {feature}
                         </li>
                       ))}
