@@ -41,9 +41,9 @@ export function ServicesList() {
           <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0EA5E9', textShadow: '0 1px 6px rgba(14,165,233,0.08)' }}>
             Our Services
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#0369A1', textShadow: '0 1px 5px rgba(255,255,255,0.6)' }}>
+          {/* <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#0369A1', textShadow: '0 1px 5px rgba(255,255,255,0.6)' }}>
             Each service meticulously crafted to exceed the expectations of the most discerning clientele
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="flex justify-center">
