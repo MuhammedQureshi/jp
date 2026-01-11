@@ -156,10 +156,10 @@ export function BeforeAfter() {
             { value: '24/7', label: 'Available' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl mb-2 bg-clip-text text-transparent font-bold" style={{ backgroundImage: 'linear-gradient(to right, #0284C7, #0EA5E9, #38BDF8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <div className="text-4xl mb-2 font-bold" style={{ color: '#FFFFFF' }}>
                 {stat.value}
               </div>
-              <div className="text-sm font-medium" style={{ color: '#0369A1' }}>{stat.label}</div>
+              <div className="text-sm font-medium" style={{ color: '#FFFFFF' }}>{stat.label}</div>
             </div>
           ))}
         </motion.div>
