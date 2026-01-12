@@ -99,7 +99,7 @@ export function Footer() {
                   <div className="p-2 rounded-lg transition-colors" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}>
                     <Mail className="h-4 w-4" />
                   </div>
-                  <span>YNaperez@aol.com</span>
+                  <span>services.jpcleaning@outlook.com</span>
                 </a>
               </li>
               <li>
