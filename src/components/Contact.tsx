@@ -27,13 +27,9 @@ const contactInfo = [
     icon: Clock,
     title: 'Availability',
     details: [
-      'Monday: 8am - 6pm',
-      'Tuesday: 8am - 6pm',
-      'Wednesday: 8am - 6pm',
-      'Thursday: 8am - 6pm',
-      'Friday: 8am - 6pm',
+      'Mon-Fri: 8am - 6pm',
     ],
-    subddetails: '',
+    subddetails: 'Feel free to reach out anytime',
     link: '#',
   },
 ];

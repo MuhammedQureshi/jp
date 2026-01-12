@@ -4,9 +4,9 @@ import { ServicesList } from './components/ServicesList';
 import { Services } from './components/Services';
 import { Portfolio } from './components/Portfolio';
 import { BeforeAfter } from './components/BeforeAfter';
-import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { WhoWeAre } from './components/About';
 
 export default function App() {
   return (
@@ -17,7 +17,7 @@ export default function App() {
       <Services />
       <Portfolio />
       <BeforeAfter />
-      <Testimonials />
+      <WhoWeAre />
       <Contact />
       <Footer />
     </div>

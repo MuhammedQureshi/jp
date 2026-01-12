@@ -65,7 +65,7 @@ export function Hero() {
               style={{ background: 'linear-gradient(to right, #e0f2fe, #bae6fd)', borderColor: '#7DD3FC' }}
             >
               <Star className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
-              <span className="text-sm tracking-wider uppercase font-medium" style={{ color: '#0284C7' }}>Cleaning Services</span>
+              <span className="text-sm tracking-wider uppercase font-medium" style={{ color: '#0284C7' }}>20% off for new customers</span>
             </motion.div>
 
             {/* Headline */}
@@ -75,9 +75,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-6xl md:text-7xl lg:text-8xl mb-6 font-bold"
             >
-              <span className="block text-gray-900">Elegance</span>
+              <span className="block text-gray-900">Shining Cleanliness</span>
               <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #0EA5E9, #0284C7, #0369A1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Redefined
+                Awaits You
               </span>
             </motion.h1>
 
@@ -87,7 +87,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-600 mb-12 max-w-xl leading-relaxed"
             >
-              Experience the pinnacle of professional cleaning. Where meticulous attention to detail meets uncompromising luxury.
+              Reliable cleaning services that leave every place fresh, neat, and tidy.
             </motion.p>
 
             {/* Premium Features */}
