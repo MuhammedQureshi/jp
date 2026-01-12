@@ -19,9 +19,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: 'YNaperez@aol.com',
+    details: 'services.jpcleaning@outlook.com',
     subddetails: 'Response within 2 hours',
-    link: 'mailto:YNaperez@aol.com',
+    link: 'mailto:services.jpcleaning@outlook.com',
   },
   {
     icon: Clock,
