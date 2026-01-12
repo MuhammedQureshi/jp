@@ -57,7 +57,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {['Services', 'Portfolio', 'Before & After', 'Testimonials'].map((item, index) => (
+            {['Services', 'Portfolio', 'Before & After', 'About Us'].map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(/ & /g, '-')}`}
@@ -110,7 +110,7 @@ export function Header() {
             className="lg:hidden py-6 px-4 rounded-2xl flex flex-col gap-4 border-t"
             style={{ borderColor: '#7DD3FC', backgroundColor: 'rgba(224, 242, 254, 0.95)' }}
           >
-            {['Services', 'Portfolio', 'Before & After', 'Testimonials'].map((item) => (
+            {['Services', 'Portfolio', 'Before & After', 'About Us'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(/ & /g, '-')}`}

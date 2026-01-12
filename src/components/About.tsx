@@ -21,7 +21,7 @@ const sections = [
 
 export function WhoWeAre() {
   return (
-    <section className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #0EA5E9 100%)' }}>
+    <section id="about us" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #0EA5E9 100%)' }}>
       {/* Background accents */}
       <div className="absolute inset-0 z-0" style={{ background: 'radial-gradient(circle at top right, rgba(14,165,233,0.04), transparent 40%), radial-gradient(circle at bottom left, rgba(125,211,252,0.03), transparent 50%)' }} />
 
