@@ -95,7 +95,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:concierge@jpselite.com" className="flex items-center gap-3 transition-colors group font-medium" style={{ color: '#E0F2FE' }} onMouseEnter={(e) => e.currentTarget.style.color = '#FFFFFF'} onMouseLeave={(e) => e.currentTarget.style.color = '#E0F2FE'}>
+                <a href="mailto:services.jpcleaning@outlook.com" className="flex items-center gap-3 transition-colors group font-medium" style={{ color: '#E0F2FE' }} onMouseEnter={(e) => e.currentTarget.style.color = '#FFFFFF'} onMouseLeave={(e) => e.currentTarget.style.color = '#E0F2FE'}>
                   <div className="p-2 rounded-lg transition-colors" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}>
                     <Mail className="h-4 w-4" />
                   </div>
