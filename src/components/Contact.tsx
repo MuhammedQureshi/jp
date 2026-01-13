@@ -27,6 +27,15 @@ const contactInfo = [
     icon: Clock,
     title: 'Availability',
     details: [
+      'Mon-Fri: 8am - 9pm',
+    ],
+    subddetails: '',
+    link: '#',
+  },
+    {
+    icon: Clock,
+    title: 'Office Hours',
+    details: [
       'Mon-Fri: 8am - 6pm',
     ],
     subddetails: 'Feel free to reach out anytime',
