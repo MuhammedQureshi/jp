@@ -123,7 +123,7 @@ export function Header() {
                 {item}
               </a>
             ))}
-            <a href="#contact">
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             <Button className="text-white w-full font-semibold" style={{ background: 'linear-gradient(to right, #0284C7, #0EA5E9)' }}>
               Book Now
             </Button>
