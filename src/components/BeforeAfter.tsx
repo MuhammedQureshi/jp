@@ -29,7 +29,7 @@ const comparisons = [
 
 export function BeforeAfter() {
   return (
-    <section id="before-after" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #BAE6FD 0%, #7DD3FC 25%, #38BDF8 50%, #0EA5E9 75%, #0284C7 100%)' }}>
+    <section id="before-after" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #BAE6FD 0%, #8c7dfc 25%, #3842f8 50%, #0EA5E9 75%, #0284C7 100%)' }}>
       {/* Background Elements */}
       <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%)' }}></div>
       

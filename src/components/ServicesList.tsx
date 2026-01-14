@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Sparkles } from 'lucide-react';
 
 const servicesListA = [
   'Domestic Cleaning',
@@ -37,13 +38,13 @@ export function ServicesList() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-
-          <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0EA5E9', textShadow: '0 1px 6px rgba(14,165,233,0.08)' }}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', borderColor: '#7DD3FC', boxShadow: '0 4px 20px rgba(14,165,233,0.3)' }}>
+            <Sparkles className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
+            <span className="text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Services</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0284C7', textShadow: '0 2px 10px rgba(255,255,255,0.8)' }}>
             Our Services
           </h2>
-          {/* <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#0369A1', textShadow: '0 1px 5px rgba(255,255,255,0.6)' }}>
-            Each service meticulously crafted to exceed the expectations of the most discerning clientele
-          </p> */}
         </motion.div>
 
         <div className="flex justify-center">

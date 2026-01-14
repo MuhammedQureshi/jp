@@ -35,7 +35,7 @@ const portfolio = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0EA5E9 0%, #38BDF8 25%, #7DD3FC 50%, #BAE6FD 75%, #E0F2FE 100%)' }}>
+    <section id="portfolio" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0ee9a7 0%, #38BDF8 25%, #7dfce9 50%, #BAE6FD 75%, #E0F2FE 100%)' }}>
       {/* Background Elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}></div>
 

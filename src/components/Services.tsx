@@ -75,7 +75,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #0EA5E9 100%)' }}>
+    <section id="services" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7df6fc 50%, #38e8f8 75%, #0ee9ab 100%)' }}>
       {/* Background Elements */}
       <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%)' }}></div>
       
