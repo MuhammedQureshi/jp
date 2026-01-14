@@ -23,7 +23,7 @@ export function WhoWeAre() {
   return (
     <section id="about us" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #3858f8 75%, #6d0ee9 100%)' }}>
       {/* Background accents */}
-      <div className="absolute inset-0 z-0" style={{ background: 'radial-gradient(circle at top right, rgba(14,165,233,0.04), transparent 40%), radial-gradient(circle at bottom left, rgba(125,211,252,0.03), transparent 50%)' }} />
+      {/* Soft overlay gradients */} <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(240, 255, 252, 0.85), rgba(255,255,255,0.92), #40e0d0d1)' }}></div> <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top right, rgba(125,211,252,0.12), transparent 60%)' }}></div> <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at bottom left, rgba(135,206,235,0.08), transparent 50%)' }}></div>
 
       {/* Decorative Lights */}
       <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(14,165,233,0.06)' }}></div>

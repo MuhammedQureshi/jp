@@ -7,6 +7,9 @@ import { BeforeAfter } from './components/BeforeAfter';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { WhoWeAre } from './components/About';
+import CleaningServiceFeatures from './components/stats';
+import ServiceBenefits from './components/ServiceBenefits';
+
 
 export default function App() {
   return (
@@ -15,8 +18,9 @@ export default function App() {
       <Hero />
       <ServicesList />
       <Services />
-      <Portfolio />
+      <ServiceBenefits />
       <BeforeAfter />
+      <CleaningServiceFeatures />
       <WhoWeAre />
       <Contact />
       <Footer />

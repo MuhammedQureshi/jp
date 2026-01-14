@@ -29,28 +29,75 @@ export function ServicesList() {
   const rightCol = combined.filter((_, i) => i % 2 === 1);
 
   return (
-    <section id="our-services" className="py-19 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #0EA5E9 100%)' }}>
-      <div className="max-w-6xl mt-20 mb-20 mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.div
+    <section id="our-services" className="py-19 relative overflow-hidden">
+
+      {/* Soft overlay gradients */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to bottom right, rgba(240,255,252,0.85), rgba(255,255,255,0.92), #40e0d0d1)',
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(circle at top right, rgba(125,211,252,0.12), transparent 60%)',
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(circle at bottom left, rgba(135,206,235,0.08), transparent 50%)',
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mt-20 mb-20 mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', borderColor: '#7DD3FC', boxShadow: '0 4px 20px rgba(14,165,233,0.3)' }}>
-            <Sparkles className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
-            <span className="text-sm tracking-wider uppercase font-semibold" style={{ color: '#0284C7' }}>Services</span>
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border backdrop-blur-md shadow-lg"
+            style={{
+              background: 'rgba(255,255,255,0.9)',
+              borderColor: '#7DD3FC',
+              boxShadow: '0 4px 20px rgba(14,165,233,0.3)',
+            }}
+          >
+            <Sparkles
+              className="h-4 w-4"
+              style={{ color: '#0EA5E9', fill: '#0EA5E9' }}
+            />
+            <span
+              className="text-sm tracking-wider uppercase font-semibold"
+              style={{ color: '#0284C7' }}
+            >
+              Services
+            </span>
           </div>
-          <h2 className="text-5xl md:text-6xl mb-6 font-bold" style={{ color: '#0284C7', textShadow: '0 2px 10px rgba(255,255,255,0.8)' }}>
+
+          <h2
+            className="text-5xl md:text-6xl mb-6 font-bold"
+            style={{
+              color: '#0284C7',
+              textShadow: '0 2px 10px rgba(255,255,255,0.8)',
+            }}
+          >
             Our Services
           </h2>
         </motion.div>
 
         <div className="flex justify-center">
           <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="bg-white rounded-lg shadow-md p-6 border w-full max-w-3xl"
@@ -60,7 +107,9 @@ export function ServicesList() {
               <ul className="space-y-3">
                 {leftCol.map((s) => (
                   <li key={s} className="flex items-center gap-3">
-                    <span style={{ color: '#0EA5E9', fontSize: '1.125rem', lineHeight: 1 }}>&bull;</span>
+                    <span style={{ color: '#0EA5E9', fontSize: '1.125rem' }}>
+                      &bull;
+                    </span>
                     <span className="text-slate-700">{s}</span>
                   </li>
                 ))}
@@ -69,7 +118,9 @@ export function ServicesList() {
               <ul className="space-y-3">
                 {rightCol.map((s) => (
                   <li key={s} className="flex items-center gap-3">
-                    <span style={{ color: '#0EA5E9', fontSize: '1.125rem', lineHeight: 1 }}>&bull;</span>
+                    <span style={{ color: '#0EA5E9', fontSize: '1.125rem' }}>
+                      &bull;
+                    </span>
                     <span className="text-slate-700">{s}</span>
                   </li>
                 ))}

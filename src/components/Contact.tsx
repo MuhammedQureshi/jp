@@ -47,7 +47,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 25%, #7DD3FC 50%, #38BDF8 75%, #40E0D0 100%)' }}>
       {/* Background Elements */}
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%)' }}></div>
+      {/* Soft overlay gradients */} <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(240, 255, 252, 0.85), rgba(255,255,255,0.92), #40e0d0d1)' }}></div> <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top right, rgba(125,211,252,0.12), transparent 60%)' }}></div> <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at bottom left, rgba(135,206,235,0.08), transparent 50%)' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
