@@ -22,14 +22,14 @@ export function Hero() {
           />
         </div>
         {/* Soft overlay gradients */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(240,249,255,0.85), rgba(255,255,255,0.92), rgba(240,249,255,0.85))' }}></div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(240, 255, 252, 0.85), rgba(255,255,255,0.92), #40e0d0d1)' }}></div>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top right, rgba(125,211,252,0.12), transparent 60%)' }}></div>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at bottom left, rgba(135,206,235,0.08), transparent 50%)' }}></div>
       </motion.div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(700)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 rounded-full"
@@ -62,7 +62,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 backdrop-blur-sm border"
-              style={{ background: 'linear-gradient(to right, #e0f2fe, #bae6fd)', borderColor: '#7DD3FC' }}
+              style={{ background: 'linear-gradient(to right, #e0f2fe, #93f8ee)', borderColor: '#7DD3FC' }}
             >
               <Star className="h-4 w-4" style={{ color: '#0EA5E9', fill: '#0EA5E9' }} />
               <span className="text-sm tracking-wider uppercase font-medium" style={{ color: '#0284C7' }}>20% off for new customers</span>
@@ -76,7 +76,7 @@ export function Hero() {
               className="text-6xl md:text-7xl lg:text-8xl mb-6 font-bold"
             >
               <span className="block text-gray-900">Shining Cleanliness</span>
-              <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #0EA5E9, #0284C7, #0369A1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #0EA5E9, #40c8e0d1, #40e0d0d1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Awaits You
               </span>
             </motion.h1>
@@ -122,7 +122,7 @@ export function Hero() {
               <Button 
                 size="lg"
                 className="w-full text-white shadow-2xl transition-all duration-300 group font-semibold"
-                style={{ background: 'linear-gradient(to right, #0EA5E9, #0284C7, #0369A1)', boxShadow: '0 25px 50px -12px rgba(14, 165, 233, 0.4)' }}
+                style={{ background: 'linear-gradient(to right, #0EA5E9, #0284C7, #40e0d0d1)', boxShadow: '0 25px 50px -12px rgba(14, 165, 233, 0.4)' }}
               >
                 Reserve Your Service
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -133,7 +133,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 className="w-full backdrop-blur-sm border-2 font-semibold"
-                style={{ borderColor: '#0EA5E9', color: '#0284C7', background: 'rgba(255,255,255,0.8)' }}
+                style={{ borderColor: '#40e0d0d1', color: '#0284C7', background: 'rgba(255,255,255,0.8)' }}
               >
                 View Portfolio
               </Button>

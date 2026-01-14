@@ -12,7 +12,7 @@ export function Header() {
   const headerBg = useTransform(
     scrollY,
     [0, 100],
-    ['rgba(255, 255, 255, 0)', 'rgba(224, 242, 254, 0.95)']
+    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.95)']
   );
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <motion.header 
-      style={{ backgroundColor: headerBg, ...(scrolled ? { borderBottom: '2px solid #7DD3FC' } : {}) }}
+      style={{ backgroundColor: headerBg, ...(scrolled ? { borderBottom: '2px solid #bdeaff' } : {}) }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled ? 'backdrop-blur-xl shadow-2xl' : ''
       }`}
@@ -43,13 +43,13 @@ export function Header() {
               <div className="absolute "></div>
               <a href="/">
               <div className="relative">
-                <img src="/1.jpeg" alt="" className='h-12 w-12' />
+                <img src="/1.jpeg" alt="" className='h-12 w-12 rounded-2xl' />
               </div>
               </a>
             </div>
             <div>
               <a href="/">
-              <span className="block text-2xl tracking-tight font-bold" style={{ color: '#0284C7' }}>JP's</span>
+              <span className="block text-2xl tracking-tight font-bold" style={{ color: '#029cc7' }}>JP's</span>
               <span className="block text-xs tracking-widest uppercase -mt-1 font-semibold" style={{ color: '#0EA5E9' }}>Cleaning Services</span>
               </a>
             </div>
@@ -87,7 +87,7 @@ export function Header() {
               <span>07411444292</span>
             </a>
             <a href="#contact">
-            <Button className="text-white shadow-lg transition-all duration-300 font-semibold" style={{ background: 'linear-gradient(to right, #0284C7, #0EA5E9, #38BDF8)', boxShadow: '0 10px 15px -3px rgba(14, 165, 233, 0.5)' }}>
+            <Button className="text-white shadow-lg transition-all duration-300 font-semibold" style={{ background: 'linear-gradient(to right, #0284C7, #0EA5E9, #38f8eb)', boxShadow: '0 10px 15px -3px rgba(14, 165, 233, 0.5)' }}>
               Book Now
             </Button>
             </a>
